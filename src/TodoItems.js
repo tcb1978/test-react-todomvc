@@ -4,7 +4,6 @@ import FlipMove from 'react-flip-move';
 export default class TodoItems extends Component {
 
     deleteKey = (key) => {
-        console.log("key is" + key);
         this.props.delete(key);
     }
 
