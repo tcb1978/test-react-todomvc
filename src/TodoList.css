@@ -35,4 +35,10 @@ ul.List {
     margin: 0 0 15px 0;
     border-radius: 5px;
     list-style: none;
+    transition: background-color .2s ease-out;
+}
+
+.List li:hover {
+    background-color: pink;
+    cursor: pointer;
 }
