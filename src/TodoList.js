@@ -27,8 +27,15 @@ export default class TodoList extends Component {
             });
         }
         this._inputElement.value = ''; // clear form
-        console.log(this.state.items);
-    };
+    }
+
+    deleteItem = (key) => {
+        console.log('Key in deleteItem: ' + key);
+        const filteredItems = this.state.items.filter((item) => item.key !== key);  
+        this.setState({
+            items: filteredItems
+        }); 
+    }
 
     render() {
         return (
@@ -41,7 +48,9 @@ export default class TodoList extends Component {
                         <button type="submit">add</button>
                     </form>
                 </header>
-                <TodoItems entries={this.state.items} />
+                <TodoItems 
+                    entries={this.state.items}
+                    delete={this.deleteItem} />
             </div>
         );
     }
