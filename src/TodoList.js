@@ -7,7 +7,8 @@ export default class TodoList extends Component {
         super(props);
 
         this.state = {
-            items : []
+            items : [],
+            hover : false
         };
 
     }
@@ -30,7 +31,6 @@ export default class TodoList extends Component {
     }
 
     deleteItem = (key) => {
-        console.log('Key in deleteItem: ' + key);
         const filteredItems = this.state.items.filter((item) => item.key !== key);  
         this.setState({
             items: filteredItems

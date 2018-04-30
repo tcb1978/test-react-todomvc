@@ -38,9 +38,16 @@ ul.List {
     border-radius: 5px;
     list-style: none;
     transition: background-color .2s ease-out;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
 }
 
 .List li:hover {
     background-color: #D39E6B;
     cursor: pointer;
+}
+
+li:hover::after {
+    content: '✔';
 }
